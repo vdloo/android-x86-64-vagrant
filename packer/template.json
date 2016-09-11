@@ -1,0 +1,67 @@
+{
+  "provisioners": [
+    {
+      "type": "shell",
+      "override": {
+        "virtualbox-iso": {
+          "scripts": ["scripts/noop.sh"]
+        }
+      }
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "override": {
+        "virtualbox": {
+          "output": "android-x86_64-virtualbox.box"
+        }
+      }
+    }
+  ],
+  "builders": [
+    {
+      "type": "virtualbox-iso",
+      "boot_command": [
+        "<down><down><down><enter><enter><wait5>",
+	"<enter><enter><wait5><right><enter><enter><enter><enter><left><enter>yes<enter><wait5>",
+	"<left><left><left><left><enter><wait5>",
+	"<enter><wait><down><enter><wait><left><enter><wait10><wait5>",
+	"<left><enter><wait><enter><wait5><enter><wait10><wait10><wait10><wait10><wait10><wait10>",
+	"<down><enter><wait5><down><enter><wait10><enter><wait5>",
+	"find / -name '*.apk' | grep setup -i | xargs rm<enter><wait5>exit<enter><wait>exit<enter><wait>",
+	"<wait10><wait10><wait10><wait10><wait10><wait10><wait10>",
+	"<down><wait><enter><wait5><down><wait><enter><wait5><down><wait><enter><wait5>",
+	"<down><wait><down><wait><left><wait><left><wait><left><wait><left><wait><right><wait><right><wait><enter><wait5>",
+	"<down><wait><right><wait><right><wait><right><wait><right><wait><right><wait><right><wait><right><wait><enter><wait5>",
+	"<down><wait><down><wait><down><wait><down><wait><down><wait><down><wait><right><wait><enter><wait5>",
+	"<down><wait><down><wait><down><wait><down><wait><down><wait><down><wait><enter><wait5>",
+	"<right><wait><enter><wait5>",
+	"<esc><wait5><esc><wait5><enter><wait5>",
+	"<down><wait><down><wait><down><wait><enter><wait5>",
+	"<down><wait><enter><wait5>",
+	"<down><wait><enter><wait5>",
+	"<tab><wait><tab><wait><tab><wait><tab><wait><enter><wait5>",
+	"<esc><wait><esc><wait><esc><wait><esc><wait><esc>"
+      ],
+      "boot_wait": "10s",
+      "disk_size": 40960,
+      "guest_os_type": "Linux26_64",
+      "http_directory": "http",
+      "iso_url": "http://cznic.dl.osdn.jp/android-x86/65890/android-x86_64-6.0-rc2.iso",
+      "iso_checksum": "6d4ca28279ee840aa2e91c6df3cf15c2",
+      "iso_checksum_type": "md5",
+      "ssh_username": "android",
+      "ssh_password": "android",
+      "ssh_port": 22,
+      "vboxmanage": [
+        [
+	  "modifyvm",
+	  "{{.Name}}",
+	  "--memory",
+	  "2048"
+        ]
+      ]
+    }
+  ]
+}
