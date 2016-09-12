@@ -14,7 +14,7 @@
       "type": "vagrant",
       "override": {
         "virtualbox": {
-          "output": "android-x86_64-virtualbox.box"
+          "output": "android-x86_64-virutalbox.box"
         }
       }
     }
@@ -26,23 +26,34 @@
         "<down><down><down><enter><enter><wait5>",
 	"<enter><enter><wait5><right><enter><enter><enter><enter><left><enter>yes<enter><wait5>",
 	"<left><left><left><left><enter><wait5>",
-	"<enter><wait><down><enter><wait><left><enter><wait10><wait5>",
-	"<left><enter><wait><enter><wait5><enter><wait10><wait10><wait10><wait10><wait10><wait10>",
+	"<enter><wait5><down><enter><wait5><left><enter><wait10><wait5>",
+	"<left><enter><wait5><enter><wait5><enter><wait10><wait10><wait10><wait10><wait10><wait10>",
 	"<down><enter><wait5><down><enter><wait10><enter><wait5>",
-	"find / -name '*.apk' | grep setup -i | xargs rm<enter><wait5>exit<enter><wait>exit<enter><wait>",
+	"find / -name '*.apk' | grep setup -i | xargs rm<enter><wait5>exit<enter><wait5>exit<enter><wait5>",
 	"<wait10><wait10><wait10><wait10><wait10><wait10><wait10>",
-	"<down><wait><enter><wait5><down><wait><enter><wait5><down><wait><enter><wait5>",
-	"<down><wait><down><wait><left><wait><left><wait><left><wait><left><wait><right><wait><right><wait><enter><wait5>",
-	"<down><wait><right><wait><right><wait><right><wait><right><wait><right><wait><right><wait><right><wait><enter><wait5>",
-	"<down><wait><down><wait><down><wait><down><wait><down><wait><down><wait><right><wait><enter><wait5>",
-	"<down><wait><down><wait><down><wait><down><wait><down><wait><down><wait><enter><wait5>",
-	"<right><wait><enter><wait5>",
+	"<down><wait5><enter><wait5><down><wait5><enter><wait5><down><wait5><enter><wait5>",
+	"<down><wait5><down><wait5><left><wait5><left><wait5><left><wait5><left><wait5><right><wait5><right><wait5><enter><wait5>",
+	"<down><wait5><right><wait5><right><wait5><right><wait5><right><wait5><right><wait5><right><wait5><right><wait5><enter><wait5>",
+	"<down><wait5><down><wait5><down><wait5><down><wait5><down><wait5><down><wait5><right><wait5><enter><wait5>",
+	"<down><wait5><down><wait5><down><wait5><down><wait5><down><wait5><down><wait5><enter><wait5>",
+	"<right><wait5><enter><wait5>",
 	"<esc><wait5><esc><wait5><enter><wait5>",
-	"<down><wait><down><wait><down><wait><enter><wait5>",
-	"<down><wait><enter><wait5>",
-	"<down><wait><enter><wait5>",
-	"<tab><wait><tab><wait><tab><wait><tab><wait><enter><wait5>",
-	"<esc><wait><esc><wait><esc><wait><esc><wait><esc>"
+	"<down><wait5><down><wait5><down><wait5><enter><wait5>",
+	"<down><wait5><enter><wait5>",
+	"<down><wait5><enter><wait5>",
+	"<tab><wait5><tab><wait5><tab><wait5><tab><wait5><enter><wait5>",
+	"<esc><wait5><esc><wait5><esc><wait5><esc><wait5><esc>",
+	"<down><wait5><down><wait5><left><wait5><left><wait5><left><wait5><left><wait5><right><wait10><enter><wait10>",
+	"<up><wait5><up><wait5>https://github.com/meefik/linuxdeploy/releases/download/2.0.0/linuxdeploy-2.0-beta1.apk<enter><wait10>",
+	"<esc><wait5><esc><wait5><esc><wait5><esc><wait5><esc><wait5>",
+	"<down><wait5><down><wait5><left><wait5><left><wait5><left><wait5><left><wait5><right><wait5><right><wait5><enter><wait5>",
+	"<right><wait5><right><wait5><right><wait5><right><wait5><right><wait5><right><wait5><enter><wait10>",
+	"<enter><wait10><right><wait5><enter><wait10>",
+	"<wait10><wait10><wait10><wait10><wait10",
+	"<right><wait><left<wait><enter><wait10>",
+	"<esc><wait><esc><wait><esc><wait><esc><wait><esc>",
+	"<enter><wait><right><wait><right><wait><down><enter><wait10>",
+	"<wait10><wait10><wait10><wait10><wait10"
       ],
       "boot_wait": "10s",
       "disk_size": 40960,
