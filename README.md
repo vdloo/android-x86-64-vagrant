@@ -4,6 +4,15 @@
 
 This repo contains scripts to create an android-x86_64 Virtualbox base box to use with Vagrant.
 
+
+## I just want an Android VM
+
+```
+./boot.sh
+```
+
+Go get some coffee, this takes a while the first run (approx 20 min). 
+
 ## Creating the base box
 
 Because there is no sshd in a standard Android installation, creating a Vagrant box from the android_x86 iso is not as simple as booting the image and exporting a boxfile. 
@@ -32,6 +41,9 @@ Build the box:
 ```
 
 Because there is no feedback during the sending of keystrokes there could be timing issues which cause the script to fail. If that happens you can try to increase the waits between the keys. Also keep in mind that because keystrokes are sent to the VM without any feedback you shouldn't touch the GUI while the packer script is running.
+
+
+## Starting the Vagrant
 
 Once you've built the box you can start the Vagrant environment
 ```
