@@ -76,10 +76,10 @@
 	"su<enter><wait5>\n",
 	"cd /data/data/ru.meefik.linuxdeploy/<enter><wait5>",
 	"sh env/cli.sh start<enter><wait5>",
-	"mount -o rw,remount /<enter><wait>",
-	"mv /etc/init.sh /oldinit.sh<enter><wait>",
-	"echo '(sleep 10; cd /data/data/ru.meefik.linuxdeploy/bin/; ./linuxdeploy mount; ./linuxdeploy start)&' > /etc/init.sh<enter><wait>",
-	"cat /oldinit.sh >> /etc/init.sh<enter><wait>"
+	"mount -o rw,remount /<enter><wait5>",
+	"mv /etc/init.sh /oldinit.sh<enter><wait5>",
+	"echo '(sleep 10; cd /data/data/ru.meefik.linuxdeploy/bin/; ./linuxdeploy mount; ./linuxdeploy start)&' > /etc/init.sh<enter><wait5>",
+	"cat /oldinit.sh >> /etc/init.sh<enter><wait5>"
       ],
       "boot_wait": "10s",
       "disk_size": 40960,
