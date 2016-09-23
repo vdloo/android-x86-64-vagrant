@@ -13,9 +13,11 @@ fi;
 if [ ! -d vagrant-catalog-generator ]; then
     git clone https://github.com/ByteInternet/vagrant-catalog-generator
 else
+    cd vagrant-catalog-generator
     git clean -xfd
     git reset --hard origin/master
     git pull origin master
+    cd ..
 fi;
 
 # put the image in an images directory with an incremental release number
@@ -24,10 +26,12 @@ RELEASE=$(find images | wc -l)
 mv packer/android-x86_64-virtualbox.box images/android-vagrant-${RELEASE}.box
 
 # clean up old boxfiles, keep up to 5 releases
-(cd vagrant-catalog-generator; python bin/prune_boxfiles.py \
+(cd vagrant-catalog-generator; export PYTHONPATH=.; \
+    python bin/prune_boxfiles.py \
     --directory images --amount 5)
 
 # generate the catalog.json with a filepath as url
-(cd vagrant-catalog-generator; python bin/generate_catalog.py \
+(cd vagrant-catalog-generator; export PYTHONPATH=.; \
+    python bin/generate_catalog.py \
     --directory images --base-url file://`pwd`/images \
     --description "android-x86_64 Vagrant box" --name android)
