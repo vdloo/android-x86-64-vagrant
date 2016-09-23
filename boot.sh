@@ -1,12 +1,12 @@
 #!/bin/sh
 
-# build the image if it does not exist yet
-if [ ! -f packer/android-x86_64-virtualbox.box ]; then
-    (cd packer && packer build -force template.json)
+# test if there is a catalog.json
+if [ ! -f images/catalog.json ]; then
+    ./build.sh  # build the image if none exists
 fi;
 
-# make sure the vagrant-vbguest plugin is installed so we can ensure it is disabled
+# Install vagrant-vbguest so we can explicitly disable it
 vagrant plugin install vagrant-vbguest
 
-# boot the VM
+# boot the Vagrant
 vagrant up

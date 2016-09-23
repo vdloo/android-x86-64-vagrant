@@ -1,6 +1,7 @@
 packer/android-x86_64-virtualbox.box
 packer/output-virtualbox-iso/*
 packer/packer_cache/*
+images/*
 .vagrant/*
 *.swp
 *.swo
