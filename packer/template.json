@@ -22,6 +22,7 @@
   "builders": [
     {
       "type": "virtualbox-iso",
+      "headless": true,
       "boot_command": [
         "<down><down><down><enter><enter><wait5>",
 	"<enter><enter><wait5><right><enter><enter><enter><enter><left><enter>yes<enter><wait5>",
@@ -48,7 +49,7 @@
 	"<tab><wait5><tab><wait5><tab><wait5><tab><wait5><enter><wait5>",
 	"<esc><wait5><esc><wait5><esc><wait5><esc><wait5><esc>",
 	"<right><wait><right><wait><right><wait><right><wait><down><wait><left><wait><left><wait><left><wait><enter><wait5>",
-	"<up><wait5><up><wait><up><wait5>https://github.com/meefik/linuxdeploy/releases/download/2.0.0/linuxdeploy-2.0-beta2.apk<enter><wait10>",
+	"<up><wait5><up><wait><up><down><wait><down><wait><up><wait5>https://github.com/meefik/linuxdeploy/releases/download/2.0.0/linuxdeploy-2.0-beta2.apk<enter><wait10>",
 	"<esc><wait5><esc><wait5><esc><wait5><esc><wait5><esc><wait5>",
 	"<right><wait><right><wait><right><wait><right><wait><down><wait><left><wait><left><wait><enter><wait5>",
 	"<right><wait5><right><wait5><right><wait5><right><wait5><right><wait5><right><wait5><enter><wait10>",
@@ -76,10 +77,10 @@
 	"su<enter><wait5>\n",
 	"cd /data/data/ru.meefik.linuxdeploy/<enter><wait5>",
 	"sh env/cli.sh start<enter><wait5>",
-	"mount -o rw,remount /<enter><wait>",
-	"mv /etc/init.sh /oldinit.sh<enter><wait>",
-	"echo '(sleep 10; cd /data/data/ru.meefik.linuxdeploy/bin/; ./linuxdeploy mount; ./linuxdeploy start)&' > /etc/init.sh<enter><wait>",
-	"cat /oldinit.sh >> /etc/init.sh<enter><wait>"
+	"mount -o rw,remount /<enter><wait5>",
+	"mv /etc/init.sh /oldinit.sh<enter><wait5>",
+	"echo '(sleep 10; cd /data/data/ru.meefik.linuxdeploy/bin/; ./linuxdeploy mount; ./linuxdeploy start)&' > /etc/init.sh<enter><wait5>",
+	"cat /oldinit.sh >> /etc/init.sh<enter><wait5>"
       ],
       "boot_wait": "10s",
       "disk_size": 40960,
