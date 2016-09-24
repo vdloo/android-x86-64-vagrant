@@ -4,7 +4,7 @@
       "type": "shell",
       "override": {
         "virtualbox-iso": {
-          "scripts": ["scripts/noop.sh"]
+          "scripts": ["scripts/provision.sh"]
         }
       }
     }
