@@ -1,0 +1,16 @@
+{
+  "compute": {
+    "vagrant": {
+      "android": {
+        "available": "vagrant -v",
+        "source": "https://github.com/vdloo/android-x86-64-vagrant",
+        "start_instance": "./boot.sh",
+        "get_hostname": "vagrant ssh-config | grep HostName | awk '{print $NF}'",
+        "get_port": "vagrant ssh-config | grep Port | awk '{print $NF}'",
+        "detect_stale_instance": "vagrant status | grep running",
+        "clean_up_instance_command": "vagrant destroy -f"
+      }
+    }
+  }
+}
+
