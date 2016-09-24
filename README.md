@@ -1,7 +1,5 @@
 # android-x86-vagrant
 
-## this project is a work in progress
-
 This repo contains scripts to create an android-x86_64 Virtualbox base box to use with Vagrant.
 
 
@@ -12,6 +10,8 @@ This repo contains scripts to create an android-x86_64 Virtualbox base box to us
 ```
 
 Go get some coffee, this takes a while the first run (approx 20 min). 
+
+Note: keep an eye on the VirtualBox GUI. The key-stroke sending process can be flaky, sometimes keys get stuck. If that happens abort the process and try again because otherwise packer will just be trashing around some random menu screen for 15 minutes.  
 
 ## Creating the base box
 
@@ -32,7 +32,7 @@ This repository contains a packer script that sets up an Android environment by 
 - Write the settings to disk
 - Authorize linux deploy as root
 - Configure and install Archlinux in a chroot
-- Autostart linux deploy
+- Autostart linux deploy using the `/etc/init.sh` script
 - Start the services (and the sshd daemon)
 
 Build the box:
