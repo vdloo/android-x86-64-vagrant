@@ -1,8 +1,16 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
 Vagrant.configure('2') do |config|
-        config.vm.box = 'android-x86_64'
-        config.vm.box_url = 'packer/android-x86_64-virtualbox.box'
-        config.ssh.username = 'android'
-        config.ssh.password = 'android'
-        config.vbguest.auto_update = false
-        config.vm.synced_folder '.', '/vagrant', disabled: true
+    config.vm.box = 'android'
+    config.ssh.username = 'android'
+    config.ssh.password = 'android'
+    config.vbguest.auto_update = false
+    config.vm.synced_folder '.', '/vagrant', disabled: true
+
+    ANDROID_VAGRANT_SCRIPT_DIR = File.dirname(__FILE__) << '/'
+    config.vm.box_url = ANDROID_VAGRANT_SCRIPT_DIR + 'images/catalog.json'
+    config.vm.provision "shell" do |s|
+        s.path  = ANDROID_VAGRANT_SCRIPT_DIR + 'provisioning/provision.sh'
+    end
 end
