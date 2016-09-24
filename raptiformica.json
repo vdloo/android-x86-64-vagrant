@@ -1,7 +1,7 @@
 {
   "raptiformica_api_version": "0.1",
   "compute": {
-    "vagrant-vagrant": {
+    "vagrant-android": {
       "headless": {
         "available": "vagrant -v",
         "source": "https://github.com/vdloo/android-x86-64-vagrant",
