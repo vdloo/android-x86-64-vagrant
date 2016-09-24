@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # test if there is a catalog.json
-if [ ! -f images/catalog.json ]; then
+if [ ! -d $HOME/.vagrant.d/boxes/android/ ]; then
     ./build.sh  # build the image if none exists
 fi;
 
