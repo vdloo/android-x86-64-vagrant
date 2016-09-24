@@ -23,15 +23,15 @@ fi;
 # put the image in an images directory with an incremental release number
 mkdir -p images
 RELEASE=$(find images | wc -l)
-mv packer/android-x86_64-virtualbox.box images/android-vagrant-${RELEASE}.box
+mv packer/android-x86_64-virtualbox.box images/android.virtualbox.release-${RELEASE}.box
 
 # clean up old boxfiles, keep up to 5 releases
 (cd vagrant-catalog-generator; export PYTHONPATH=.; \
     python bin/prune_boxfiles.py \
-    --directory images --amount 5)
+    --directory ../images --amount 5)
 
 # generate the catalog.json with a filepath as url
 (cd vagrant-catalog-generator; export PYTHONPATH=.; \
     python bin/generate_catalog.py \
-    --directory images --base-url file://`pwd`/images \
+    --directory ../images --base-url file://`pwd`/../images \
     --description "android-x86_64 Vagrant box" --name android)

@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure('2') do |config|
-    config.vm.box = 'android-x86_64'
+    config.vm.box = 'android'
     config.ssh.username = 'android'
     config.ssh.password = 'android'
     config.vbguest.auto_update = false
