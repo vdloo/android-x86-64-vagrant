@@ -1,4 +1,5 @@
 {
+  "raptiformica_api_version": "0.1",
   "compute": {
     "vagrant-vagrant": {
       "headless": {
