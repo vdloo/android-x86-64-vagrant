@@ -1,7 +1,7 @@
 {
   "compute": {
-    "vagrant": {
-      "android": {
+    "vagrant-vagrant": {
+      "headless": {
         "available": "vagrant -v",
         "source": "https://github.com/vdloo/android-x86-64-vagrant",
         "start_instance": "./boot.sh",
