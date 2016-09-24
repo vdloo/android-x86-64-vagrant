@@ -22,7 +22,6 @@
   "builders": [
     {
       "type": "virtualbox-iso",
-      "headless": true,
       "boot_command": [
         "<down><down><down><enter><enter><wait5>",
 	"<enter><enter><wait5><right><enter><enter><enter><enter><left><enter>yes<enter><wait5>",
