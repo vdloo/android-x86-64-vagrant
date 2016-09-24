@@ -1,3 +1,3 @@
 #!/bin/bash
-pacman -Syyu
-pacman -S htop vim-nox rsync git iproute2 python --noconfirm
+sudo pacman -Syyu
+sudo pacman -S htop vim rsync git iproute2 python --noconfirm
