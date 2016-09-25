@@ -15,4 +15,4 @@ pacman -Rsc python --noconfirm 2> /dev/null
 pacman -S --force python --noconfirm 2> /dev/null
 
 # Install additional tools
-pacman -S tar procps --noconfirm
+pacman -S tar procps python2 --noconfirm
