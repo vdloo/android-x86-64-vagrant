@@ -16,6 +16,3 @@ pacman -S --force python --noconfirm 2> /dev/null
 
 # Install additional tools
 pacman -S tar procps python2 --noconfirm
-
-# route ipv6 through tun0 for CJDNS
-ip -6 route add fc00::/8 dev tun0  proto kernel  metric 256  mtu 1304 pref medium
