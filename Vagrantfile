@@ -14,4 +14,8 @@ Vagrant.configure('2') do |config|
     config.vm.provision "shell" do |s|
         s.path  = ANDROID_VAGRANT_SCRIPT_DIR + 'provisioning/provision.sh'
     end
+
+    config.vm.provider :virtualbox do |vbox|
+        vbox.memory = 512
+    end
 end
