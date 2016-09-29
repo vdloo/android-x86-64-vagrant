@@ -13,6 +13,5 @@ fi
 rm -f /var/lib/pacman/db.lck
 pacman -Rsc python --noconfirm 2> /dev/null
 pacman -S --force python --noconfirm 2> /dev/null
-
-# Install additional tools
-pacman -S tar procps python2 --noconfirm
+# Ensure additional tools are installed
+pacman -S htop vim rsync git iproute2 python3 python2 tar procps libmnl libnftnl popt gpm --force --noconfirm
