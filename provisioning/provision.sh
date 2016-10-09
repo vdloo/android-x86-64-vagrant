@@ -15,7 +15,7 @@ pacman -Rsc python --noconfirm 2> /dev/null
 pacman -S --force python --noconfirm 2> /dev/null
 # Ensure additional tools are installed
 pacman -S inetutils htop vim rsync git iproute2 racket-minimal \
-	python3 python2 tar procps libmnl libnftnl popt gpm --force --noconfirm
+	coreutils python3 python2 tar procps libmnl libnftnl popt gpm --force --noconfirm
 
 NEWHOSTNAME=$(uuidgen | sed 's/-//g' | head -c 16)
 echo $NEWHOSTNAME > /etc/hostname
