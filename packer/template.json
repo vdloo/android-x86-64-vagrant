@@ -48,7 +48,7 @@
 	"<tab><wait5><tab><wait5><tab><wait5><tab><wait5><enter><wait5>",
 	"<esc><wait5><esc><wait5><esc><wait5><esc><wait5><esc>",
 	"<right><wait><right><wait><right><wait><right><wait><down><wait><left><wait><left><wait><left><wait><enter><wait5>",
-	"<up><wait5><up><wait><up><down><wait><down><wait><up><wait5>https://github.com/meefik/linuxdeploy/releases/download/2.0.0/linuxdeploy-2.0-beta2.apk<enter><wait10>",
+	"<up><wait5><up><wait><up><down><wait><down><wait><up><wait5>https://github.com/meefik/linuxdeploy/releases/download/2.0.1/linuxdeploy-2.0.1-218.apk<enter><wait10>",
 	"<esc><wait5><esc><wait5><esc><wait5><esc><wait5><esc><wait5>",
 	"<right><wait><right><wait><right><wait><right><wait><down><wait><left><wait><left><wait><enter><wait5>",
 	"<right><wait5><right><wait5><right><wait5><right><wait5><right><wait5><right><wait5><enter><wait10>",
