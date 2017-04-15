@@ -16,6 +16,6 @@ Vagrant.configure('2') do |config|
     end
 
     config.vm.provider :virtualbox do |vbox|
-        vbox.memory = 2048
+        vbox.memory = 4096
     end
 end
