@@ -83,7 +83,7 @@
       "disk_size": 40960,
       "guest_os_type": "Linux26_64",
       "http_directory": "http",
-      "iso_url": "http://onet.dl.osdn.jp/android-x86/65890/android-x86_64-6.0-r2.iso",
+      "iso_url": "https://dotsrc.dl.osdn.net/osdn/android-x86/65890/android-x86_64-6.0-r2.iso",
       "iso_checksum": "8a744f26114bc03e18597e6b185076db22959be9",
       "iso_checksum_type": "sha1",
       "ssh_username": "android",
